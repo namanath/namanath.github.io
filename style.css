@@ -72,6 +72,8 @@ a:focus-visible, button:focus-visible {
   border-color: var(--accent);
 }
 
+.entry-photos.single.wide { grid-template-columns: minmax(0, 430px); }
+
 .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
 
 /* ---------- Nav ---------- */
@@ -82,7 +84,7 @@ header {
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; padding: 0.9rem 0; flex-wrap: wrap;
+  gap: 1rem; padding-block: 0.9rem; flex-wrap: wrap;
 }
 .nav-name {
   font-family: var(--display); font-weight: 750; font-size: 1.05rem;
@@ -108,8 +110,8 @@ header {
   to   { opacity: 1; transform: none; }
 }
 .hero-grid {
-  display: grid; grid-template-columns: 1fr 215px;
-  gap: 2.8rem; align-items: center;
+  display: grid; grid-template-columns: 1fr 260px;
+  gap: 2.2rem; align-items: center;
 }
 .hero-photo {
   width: 100%; height: auto; display: block;
@@ -118,12 +120,17 @@ header {
 @media (max-width: 640px) {
   .hero { padding-top: 3.5rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-photo { max-width: 190px; order: -1; }
+  .hero-photo { max-width: 230px; order: -1; }
+
+  .wrap { padding: 0 1.4rem; }
+  .nav { padding-block: 1rem 1.15rem; row-gap: 0.55rem; }
+  .nav-links { gap: 0.55rem 1.2rem; }
+  
 }
 .kicker { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
 h1 {
   font-family: var(--display); font-weight: 800;
-  font-size: clamp(2.5rem, 7.5vw, 3.6rem);
+  font-size: clamp(2.3rem, 6.3vw, 3.2rem);
   line-height: 1.04; letter-spacing: -0.025em;
   margin-bottom: 1.4rem;
 }
